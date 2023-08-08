@@ -5,3 +5,8 @@ export type RecursivePartial<T> = {
 		? RecursivePartial<T[P]>
 		: T[P]
 }
+
+export type WithProps<TKey extends string, TData, TProps extends object = object> = Record<TKey, TData> & {
+	index?: number
+	props: TProps
+}
