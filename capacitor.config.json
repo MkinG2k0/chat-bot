@@ -1,0 +1,10 @@
+{
+  "appId": "com.react.app",
+  "appName": "react template",
+  "webDir": "web",
+  "bundledWebRuntime": false,
+  "server": {
+  }
+}
+
+
