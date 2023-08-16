@@ -1,0 +1,6 @@
+body {
+	//background: url('/resources/Rectangle.png'), lightgray 50% / cover no-repeat;
+	background: linear-gradient(180deg, var(--accent) 0%, var(--primary) 100%);
+
+	backdrop-filter: blur(307.5px);
+}

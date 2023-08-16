@@ -9,10 +9,15 @@ import { Moon, Sun } from 'lucide-react'
 export function ModeToggle() {
 	const { setTheme } = useContext(themeContext)
 
+	const onToggleTheme = (theme: string) => {
+		return () => {
+			setTheme(theme)
+		}
+	}
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button size={'icon'} variant={'outline'}>
+				<Button className={'bg-background'} size={'icon'} variant={'ghost'}>
 					<Sun className={'h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0'} />
 					<Moon
 						className={'absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100'}
@@ -21,10 +26,10 @@ export function ModeToggle() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align={'end'}>
-				<DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme('green')}>Green</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+				<DropdownMenuItem onClick={onToggleTheme('light')}>Light</DropdownMenuItem>
+				<DropdownMenuItem onClick={onToggleTheme('dark')}>Dark</DropdownMenuItem>
+				<DropdownMenuItem onClick={onToggleTheme('green')}>Green</DropdownMenuItem>
+				<DropdownMenuItem onClick={onToggleTheme('system')}>System</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
 	)

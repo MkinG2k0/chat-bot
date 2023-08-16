@@ -35,7 +35,8 @@ module.exports = {
 			template: 'src/shared/templates/comp',
 		},
 		slice: {
-			generate: 'src/*/',
+			generate: 'src/*/model',
+			rootDir: false,
 			template: 'src/shared/templates/slice',
 		},
 		ui: {

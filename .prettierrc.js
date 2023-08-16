@@ -1,4 +1,4 @@
-// 07.08.2023, 17:01:20 
+// 09.08.2023, 12:56:42 
 module.exports = {
 	trailingComma: 'all',
 	singleQuote: true,

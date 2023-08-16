@@ -4,17 +4,18 @@
 
 @layer base {
 	:root {
-		--radius: 0.5rem;
+		--radius: 1.5rem;
+		--bg-chat: #D3E4FD;
 	}
 
 	.light {
-		--text: #424242;
+		--text: white;
 
-		--background: #fdf7fd;
-		--foreground: var(--text);
+		--background: white;
+		--foreground: black;
 
 		--muted: var(--background);
-		--muted-foreground: var(--text);
+		--muted-foreground: #777777;
 
 		--popover: var(--background);
 		--popover-foreground: var(--text);
@@ -25,13 +26,13 @@
 		--border: var(--text);
 		--input: var(--text);
 
-		--primary: #4eb848;
+		--primary: #007AFE;
 		--primary-foreground: var(--text);
 
 		--secondary: #baedeb;
 		--secondary-foreground: var(--text);
 
-		--accent: #33ae2d;
+		--accent: rgb(2, 54, 109);
 		--accent-foreground: var(--text);
 
 		--destructive: var(--background);
@@ -111,7 +112,8 @@
 	* {
 		@apply border-border;
 	}
+
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-text;
 	}
 }

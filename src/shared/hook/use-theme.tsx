@@ -1,11 +1,16 @@
 import { createContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-export const themeContext = createContext({ setTheme: (prev: string) => {}, theme: 'dark' })
+export const themeContext = createContext({
+	setTheme: (prev: string) => {},
+	theme: 'dark',
+})
 
 const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches
+const isDarkFake = () => false
 
 export const ThemeContext = ({ children }) => {
-	const defaultTheme = useRef<string>(localStorage.getItem('theme') || (isDark() ? 'dark' : 'light'))
+	// Указал что по умолчанию тема белая тема дабы соответствовать дизайну
+	const defaultTheme = useRef<string>(localStorage.getItem('theme') || (isDarkFake() ? 'dark' : 'light'))
 	const html = useRef(document.getElementsByTagName('html')[0])
 	const [theme, setTheme] = useState<string>(defaultTheme.current)
 

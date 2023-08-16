@@ -68,11 +68,13 @@ module.exports = {
 		'@typescript-eslint/no-empty-interface': [0], // разрешаем пустые интерфейсы
 		'react/react-in-jsx-scope': [0], // разрешаем глобальный реакт
 		'no-empty-pattern': [0], // разрешаем пустую деструктуризацию "{}"
-		"no-unused-vars": "off",	// не используемые переменные
+		"no-unused-vars": [0],	// не используемые переменные
 		'react/prop-types': [0], // выключаем проверку на типизацию пропсов
 		'react/display-name': [0], // разрешаем компонетну возращать калбэк , пример "/src/core/providers/*"
 		'no-mixed-spaces-and-tabs': [0], // смешивание табов и пробелов , временно
-		'@typescript-eslint/no-namespace': 'off', // ? WARN
+		'@typescript-eslint/no-namespace': 'off',
+		// ? WARN
+		'perfectionist/sort-jsx-props':[1],
 		'react/jsx-curly-brace-presence': [1, {props: 'always', propElementValues: 'always'}], // фигурные скобки в jsx
 		'max-len': [1, {code: 120, tabWidth: 2, comments: 120}], // Принудительно установите максимальную длину строки
 		'@typescript-eslint/no-empty-function': [1], // пустые функции

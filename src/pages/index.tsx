@@ -1,6 +1,1 @@
-export * from './auth'
-export * from './group'
 export * from './main'
-export * from './profile'
-export * from './schedule'
-export * from './settings'

@@ -3,12 +3,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-	plugins: [
-		react(),
-		tsconfigPaths(),
-	],
-	preview: {
-	},
-	server: {
-	},
+	plugins: [react(), tsconfigPaths()],
+	preview: {},
+	server: {},
 })
