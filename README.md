@@ -1,21 +1,41 @@
-# Template
+# Chat bot
 
-- to build for a mobile platform, you need to run the script gen:add-android or gen:add-ios
+- to build for all platforms, run
+
+```shell
+npm run build:all
+```
+
+- to start web run
+
+```shell
+npm run dev
+```
+
+- to build for a mobile platform, you need to run
+
+```shell
+npm run gen:add-android
+```
+
+- to start the mobile work environment, run open:android
+
+```shell
+npm run open:android
+```
+
+## Stack
 
 * TS
 * React
 * React-Router-Dom
 * Redux-Toolkit
+* RTK
 * SCSS
 * Vite
 * Generate Scripts
 * Eslint
 * Prettier
 * Axios
-* Ionic
 * Capacitor
-
-dev server    
-add in capacitor config
-"url": "http://192.168.31.245:5173/"
-
+* ShadcnUi
